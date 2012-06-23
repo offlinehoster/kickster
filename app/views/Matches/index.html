@@ -1,4 +1,4 @@
-#{extends 'main.html' /}<div class="opacity viewtable"><h2>Matches</h2></div>
+#{extends 'main.html' /}<div class="opacity viewtable"><h2>Matches</h2><p /></div>
 <table class="opacity viewtable table table-striped entity Match">
     <thead>
         <tr>
@@ -18,12 +18,12 @@
                 <td>${entity.team1.raw()} </td><td> -  </td><td>${entity.team2.raw()}</td>
                 <td>${entity.scoreTeam1} : ${entity.scoreTeam2}</td>
                 <td>
-                    <a href="@{Matches.show(entity.id)}">Show</a>&nbsp;
-                    <a href="@{Matches.edit(entity.id)}">Edit</a>&nbsp;
-                    <a href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
+                    <a class="icon-zoom-in" href="@{Matches.show(entity.id)}"></a>&nbsp;
+                    <a class="icon-edit" href="@{Matches.edit(entity.id)}"></a>&nbsp;
+                    <a class="icon-remove" href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;"></a>
                 </td>
             </tr>
             #{/list}
         </tbody>
 </table>
-<a div class="creationlink opacity" href="@{Matches.create}">Create new Match</a>
+<a div class="btn btn-primary" href="@{Matches.create}">Create Match</a>

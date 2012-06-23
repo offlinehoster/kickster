@@ -5,8 +5,8 @@
 <div class="entity">
 #{form @Players.update(), id:'createForm'}
 	#{include 'Players/_form.html' /}
-	<input type="submit" name="submit" value="Save" />
+	<input class="btn btn-primary" type="submit" name="submit" value="Save" />
 #{/form}
 </div>
 
-<a href="@{Players.index}">Cancel</a>
+<a div class="btn" href="@{Players.index}">Cancel</a>

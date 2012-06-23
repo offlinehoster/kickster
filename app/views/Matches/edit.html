@@ -5,8 +5,8 @@
 <div class="entity">
 #{form @Matches.update(), id:'createForm'}
 	#{include 'Matches/_form.html' /}
-	<input type="submit" name="submit" value="Save" />
+        <br /><input class="btn btn-primary" type="submit" name="submit" value="Save" />
 #{/form}
 </div>
 
-<a href="@{Matches.index}">Cancel</a>
+<a div class="btn" href="@{Matches.index}">Cancel</a>

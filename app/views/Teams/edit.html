@@ -5,8 +5,7 @@
 <div class="entity">
 #{form @Teams.update(), id:'createForm'}
 	#{include 'Teams/_form.html' /}
-	<input type="submit" name="submit" value="Save" />
+	<input class="btn btn-primary" type="submit" name="submit" value="Save" />
 #{/form}
 </div>
-
-<a href="@{Teams.index}">Cancel</a>
+<a div class="btn" href="@{Teams.index}">Cancel</a>

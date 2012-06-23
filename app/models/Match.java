@@ -22,7 +22,7 @@ public class Match extends Model {
 
     @Temporal(TemporalType.DATE)
     public Date date;
-
+    
     public Match(){
         date = new Date();
     }

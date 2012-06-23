@@ -1,25 +1,25 @@
 #{extends 'main.html' /}
-<div class="opacity viewtable"><h2>Players</h2></div>
+<div class="opacity viewtable"><h2>Players</h2><p /></div>
     <table class="opacity viewtable table table-striped entity Player">
     <thead>
         <tr>
-            <th><!-- actions --></th>
-            <th>Name</th><th>Team</th><th>Score</th><th>Id</th>
+            <th>Name</th><th>Team</th><th>Score</th><th>Id</th><th>Options</th>
         </tr>
     </thead>
     <tbody>
 	#{list items:entities, as:'entity'}
         <tr>
-            <td>
-                <a href="@{Players.show(entity.id)}">Show</a>&nbsp;
-                <a href="@{Players.edit(entity.id)}">Edit</a>&nbsp;
-                <a href="@{Players.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
-            </td>
+            
             <td>${entity.name}</td>
             <td>${entity.teams}</td>
             <td>${entity.score}</td>
             <td>${entity.id}</td>
+            <td>
+                <a class="icon-zoom-in" href="@{Players.show(entity.id)}"></a>&nbsp;
+                <a class="icon-edit" href="@{Players.edit(entity.id)}"></a>&nbsp;
+                <a class="icon-remove" href="@{Players.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;"></a>
+            </td>
         </tr>
 	#{/list}
     </tbody>
-</table><a class="creationlink opacity" href="@{Players.create}">Create</a>
+</table><a div class="btn btn-primary" href="@{Players.create}">Create Player</a>
