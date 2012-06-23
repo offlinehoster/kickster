@@ -1,8 +1,7 @@
 package models;
 
-import java.util.List;
+import java.util.Set;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import play.db.jpa.Model;
 
@@ -14,9 +13,8 @@ import play.db.jpa.Model;
 public class Player extends Model {
 
     public String name;
-    @ManyToMany
-    @JoinTable(name = "player_team")
-    public List<Team> teams;
+    @ManyToMany(mappedBy="players")
+    public Set<Team> teams;
     public int score;
 
     @Override
