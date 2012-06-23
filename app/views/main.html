@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/css/bootstrap.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/css/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/img/favicon.png'}">
+        <script src="@{'/public/js/jquery-1.7.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{headerNavigation /}
+        <div class="container">
+            #{doLayout /}
+        </div>
+    </body>
+</html>
