@@ -1,4 +1,11 @@
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    background-image: url(/public/img/grass.png);
+}
+.whiteline {
+    background-image: url(/public/img/rasenkante.gif);
+    background-color: none;
+}
+.navbar {
+    margin-top: 10px;
 }
