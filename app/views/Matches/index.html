@@ -1,74 +1,25 @@
-#{extends 'main.html' /}
-
-<h2>Matches</h2>
-
-<table class="entity Match">
-	<thead>
-		<tr>
-			<th><!-- actions --></th>
-			
-	        
-				<th>Team1</th>
-	        
-			
-	        
-				<th>Team2</th>
-	        
-			
-	        
-				<th>Score Team1</th>
-	        
-			
-	        
-				<th>Score Team2</th>
-	        
-			
-	        
-				<th>Date</th>
-	        
-			
-	        
-				<th>Id</th>
-	        
-			
-		</tr>
-	</thead>
-	<tbody>
+#{extends 'main.html' /}<h2>Matches</h2><table class="table table-striped entity Match">
+    <thead>
+        <tr>
+            <th><!-- actions --></th>
+            <th>Date</th>
+            <th>Teams</th>
+            <th>Results</th>
+        </tr>
+    </thead>
+    <tbody>
 	#{list items:entities, as:'entity'}
-		<tr>
-			<td>
-				<a href="@{Matches.show(entity.id)}">Show</a>&nbsp;
-				<a href="@{Matches.edit(entity.id)}">Edit</a>&nbsp;
-				<a href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
-			</td>
-			
-        
-					<td>${entity.team1}</td>
-        
-			
-        
-					<td>${entity.team2}</td>
-        
-			
-        
-					<td>${entity.scoreTeam1}</td>
-        
-			
-        
-					<td>${entity.scoreTeam2}</td>
-        
-			
-        
-					<td>${entity.date}</td>
-        
-			
-        
-					<td>${entity.id}</td>
-        
-			
-		</tr>
-	#{/list}
-	</tbody>
-</table>
+        <tr>
+            <td>
+                <a href="@{Matches.show(entity.id)}">Show</a>&nbsp;
+                <a href="@{Matches.edit(entity.id)}">Edit</a>&nbsp;
+                <a href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
+            </td>
+            <td>${entity.date}</td>
+            <td>${entity.team1} vs ${entity.team2}</td>
+            <td>${entity.scoreTeam1} : ${entity.scoreTeam2}</td>
 
-<a href="@{Matches.create}">Create</a>
+        </tr>
+	#{/list}
+    </tbody>
+</table><a href="@{Matches.create}">Create</a>
