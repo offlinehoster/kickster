@@ -1,0 +1,42 @@
+#{extends 'main.html' /}
+
+<h2>Teams</h2>
+
+<table class="entity Team">
+	<thead>
+		<tr>
+			<th><!-- actions --></th>
+			
+	        
+				<th>Players</th>
+	        
+			
+	        
+				<th>Id</th>
+	        
+			
+		</tr>
+	</thead>
+	<tbody>
+	#{list items:entities, as:'entity'}
+		<tr>
+			<td>
+				<a href="@{Teams.show(entity.id)}">Show</a>&nbsp;
+				<a href="@{Teams.edit(entity.id)}">Edit</a>&nbsp;
+				<a href="@{Teams.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
+			</td>
+			
+        
+					<td>${entity.players}</td>
+        
+			
+        
+					<td>${entity.id}</td>
+        
+			
+		</tr>
+	#{/list}
+	</tbody>
+</table>
+
+<a href="@{Teams.create}">Create</a>

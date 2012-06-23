@@ -1,0 +1,155 @@
+
+ <div class="row">
+  <div class="label">Team1</div>
+  <div class="field">
+    
+    
+    
+    
+      
+      
+        <select name="entity.team1.id">
+              
+                      <option value="">(None)</option>              
+              
+        %{ models.Team.all().fetch().sort{ it.toString() }.each() { }%
+          
+          %{
+            selected = false;
+            if (entity?.team1?.id == it.id) {
+              selected = true
+            }
+          }%
+          <option value="${it?.id}" ${selected ? 'selected'.raw() : ''}>${it}</option>
+        %{ } }%
+        </select>
+      
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.team1')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Team2</div>
+  <div class="field">
+    
+    
+    
+    
+      
+      
+        <select name="entity.team2.id">
+              
+                      <option value="">(None)</option>              
+              
+        %{ models.Team.all().fetch().sort{ it.toString() }.each() { }%
+          
+          %{
+            selected = false;
+            if (entity?.team2?.id == it.id) {
+              selected = true
+            }
+          }%
+          <option value="${it?.id}" ${selected ? 'selected'.raw() : ''}>${it}</option>
+        %{ } }%
+        </select>
+      
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.team2')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Score Team1</div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="text" name="entity.scoreTeam1" value="${entity?.scoreTeam1}"/>
+    
+  </div>
+  <span class="error">${errors.forKey('entity.scoreTeam1')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Score Team2</div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="text" name="entity.scoreTeam2" value="${entity?.scoreTeam2}"/>
+    
+  </div>
+  <span class="error">${errors.forKey('entity.scoreTeam2')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Date</div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="text" name="entity.date" value="${entity?.date}"/>
+    
+  </div>
+  <span class="error">${errors.forKey('entity.date')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label"></div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="hidden" name="entity.id" value="${entity?.id}"/>
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.id')}</span>
+</div>
+
+
