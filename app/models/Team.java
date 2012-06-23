@@ -1,8 +1,8 @@
 package models;
 
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import play.db.jpa.Model;
@@ -14,8 +14,7 @@ import play.db.jpa.Model;
 @Entity
 public class Team extends Model {
 
-    @ManyToMany
-    @JoinTable(name = "player_team")
+    @ManyToMany(cascade = CascadeType.ALL)
     public Set<Player> players;
     @OneToMany(mappedBy = "team1")
     public Set<Match> matches1;
@@ -27,13 +26,17 @@ public class Team extends Model {
             players.add(player);
         }
     }
-    
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        int i = 0;
         for (Player p : players) {
             sb.append(p.name);
-            sb.append(" ");
+            i++;
+            if (i < players.size()) {
+                sb.append(" & ");
+            }
         }
         return sb.toString();
     }
