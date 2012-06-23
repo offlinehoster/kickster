@@ -10,7 +10,32 @@ body {
 .whitebar {
     margin-top: 5px;
 }
-
 .navbar-fixed-top{
     padding-top: 5px;
+}
+.creationlink {
+    padding-left: 5px; 
+    padding-right: 5px;
+    width: auto;
+    background-color: white;
+}
+.viewtable {
+    background-color: white;
+}
+.opacity {   
+    opacity: 0.5;       /* modern browser */  
+    -moz-opacity: 0.5;  /* older Mozilla browser */  
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 in Standard Compliant Mode */  
+    filter:alpha(opacity=50); /* IE5.x -7.0 */  
+    border-radius: 10px 10px;
+}
+.opacitynavbar {   
+    opacity: 0.6;       /* modern browser */  
+    -moz-opacity: 0.5;  /* older Mozilla browser */  
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 in Standard Compliant Mode */  
+    filter:alpha(opacity=80); /* IE5.x -7.0 */  
+}
+.blatest {
+    padding-left: 8px; 
+    padding-right: 8px;
 }

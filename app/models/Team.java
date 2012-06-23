@@ -35,7 +35,7 @@ public class Team extends Model {
             sb.append(p.name);
             i++;
             if (i < players.size()) {
-                sb.append(" & ");
+                sb.append(" <br> ");
             }
         }
         return sb.toString();

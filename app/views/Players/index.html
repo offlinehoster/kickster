@@ -1,8 +1,10 @@
-#{extends 'main.html' /}<h2>Players</h2><table class="table table-striped entity Player">
+#{extends 'main.html' /}
+<div class="opacity viewtable"><h2>Players</h2></div>
+    <table class="opacity viewtable table table-striped entity Player">
     <thead>
         <tr>
             <th><!-- actions --></th>
-            <th>Name</th><th>Teams</th><th>Score</th><th>Id</th>
+            <th>Name</th><th>Team</th><th>Score</th><th>Id</th>
         </tr>
     </thead>
     <tbody>
@@ -20,4 +22,4 @@
         </tr>
 	#{/list}
     </tbody>
-</table><a href="@{Players.create}">Create</a>
+</table><a class="creationlink opacity" href="@{Players.create}">Create</a>

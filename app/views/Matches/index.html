@@ -1,25 +1,29 @@
-#{extends 'main.html' /}<h2>Matches</h2><table class="whiteline table table-striped entity Match">
+#{extends 'main.html' /}<div class="opacity viewtable"><h2>Matches</h2></div>
+<table class="opacity viewtable table table-striped entity Match">
     <thead>
         <tr>
-            <th><!-- actions --></th>
-            <th>Date</th>
-            <th>Teams</th>
-            <th>Results</th>
+    <div
+        <th><!-- actions --></th>
+        <th>Date</th>
+        <th colspan="3" >Teams</th>
+        <th>Results</th>
+        <th>Options</th>
         </tr>
-    </thead>
-    <tbody>
-	#{list items:entities, as:'entity'}
-        <tr>
-            <td>
-                <a href="@{Matches.show(entity.id)}">Show</a>&nbsp;
-                <a href="@{Matches.edit(entity.id)}">Edit</a>&nbsp;
-                <a href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
-            </td>
-            <td>${entity.date}</td>
-            <td>${entity.team1} vs ${entity.team2}</td>
-            <td>${entity.scoreTeam1} : ${entity.scoreTeam2}</td>
+        </thead>
+        <tbody>
+            #{list items:entities, as:'entity'}
+            <tr>
 
-        </tr>
-	#{/list}
-    </tbody>
-</table><a href="@{Matches.create}">Create</a>
+                <td>${entity.date}</td>
+                <td>${entity.team1.raw()} </td><td> -  </td><td>${entity.team2.raw()}</td>
+                <td>${entity.scoreTeam1} : ${entity.scoreTeam2}</td>
+                <td>
+                    <a href="@{Matches.show(entity.id)}">Show</a>&nbsp;
+                    <a href="@{Matches.edit(entity.id)}">Edit</a>&nbsp;
+                    <a href="@{Matches.delete(entity.id)}" onclick="if (!confirm('Are you sure you want to delete this record?')) return false;">Delete</a>
+                </td>
+            </tr>
+            #{/list}
+        </tbody>
+</table>
+<a div class="creationlink opacity" href="@{Matches.create}">Create new Match</a>

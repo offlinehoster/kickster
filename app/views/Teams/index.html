@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
 
-<h2>Teams</h2>
+<div class="opacity viewtable"><h2>Teams</h2></div>
 
-<table class="table table-striped entity Team">
+<table class="opacity viewtable table table-striped entity Team">
     <thead>
         <tr>
             <th><!-- actions --></th>
@@ -23,4 +23,4 @@
     </tbody>
 </table>
 
-<a href="@{Teams.create}">Create</a>
+<a class="creationlink opacity" href="@{Teams.create}">Create</a>
