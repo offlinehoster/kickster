@@ -1,0 +1,96 @@
+
+ <div class="row">
+  <div class="label">Name</div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="text" name="entity.name" value="${entity?.name}"/>
+    
+  </div>
+  <span class="error">${errors.forKey('entity.name')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Teams</div>
+  <div class="field">
+    
+    
+    
+    
+      
+        <select name="entity.teams.id" multiple>
+        %{ models.Team.all().fetch().sort{ it.toString() }.each() { }%
+          
+          %{ 
+            selected = false;
+            entity?.teams.each() { f ->
+              if (f.id == it?.id)
+                selected = true;
+            }
+          }%
+          <option value="${it?.id}" ${selected ? 'selected'.raw() : ''}>${it}</option>
+        %{ } }%
+        </select>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.teams')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label">Score</div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="text" name="entity.score" value="${entity?.score}"/>
+    
+  </div>
+  <span class="error">${errors.forKey('entity.score')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label"></div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="hidden" name="entity.id" value="${entity?.id}"/>
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.id')}</span>
+</div>
+
+

@@ -1,0 +1,56 @@
+
+ <div class="row">
+  <div class="label">Players</div>
+  <div class="field">
+    
+    
+    
+    
+      
+        <select name="entity.players.id" multiple>
+        %{ models.Player.all().fetch().sort{ it.toString() }.each() { }%
+          
+          %{ 
+            selected = false;
+            entity?.players.each() { f ->
+              if (f.id == it?.id)
+                selected = true;
+            }
+          }%
+          <option value="${it?.id}" ${selected ? 'selected'.raw() : ''}>${it}</option>
+        %{ } }%
+        </select>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.players')}</span>
+</div>
+
+
+ <div class="row">
+  <div class="label"></div>
+  <div class="field">
+    
+    
+    
+    
+    
+    
+    
+    
+      <input type="hidden" name="entity.id" value="${entity?.id}"/>
+    
+    
+    
+  </div>
+  <span class="error">${errors.forKey('entity.id')}</span>
+</div>
+
+
