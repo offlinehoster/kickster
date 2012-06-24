@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th></th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+        #{list _matches, as: 'match'}
+        <tr>
+            <th>${match.date.toString()}</th>
+            <td>
+                ${match.raw()}
+            </td>
+        </tr>
+        #{/list}
+    </tbody>
+</table>

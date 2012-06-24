@@ -10,7 +10,8 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+        List<Match> matches = Match.all().fetch();
+        render(matches);
     }
 
 }

@@ -1,5 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<div class="footerbar opacity hero-unit "><h2>Welcome</h2></div>
+<div class=" opacity hero-unit ">
+    <h2>current Matches</h2>
+    #{matchListing matches: matches /}
+</div>
 <div class="btn btn-primary">FIRST</div>
