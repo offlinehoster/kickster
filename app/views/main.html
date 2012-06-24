@@ -12,21 +12,21 @@
         <script src="@{'/public/js/jquery-1.7.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /}
     </head>
-    <body>
-        #{headerNavigation /}
-        <div class="container">
-            #{doLayout /}
+    <body data-dateformat="${play.configuration['date.format']}">
+          #{headerNavigation /}
+          <div class="container">
+          #{doLayout /}
 
-             <!-- /*footer start*/   -->
-<div class="container opacity">
-                                        <footer><hr /> <p>2012</p> </footer>
-                                    </div>
-             <!-- /*footer end*/   -->
+          <!-- /*footer start*/   -->
+          <div class="container opacity">
+            <footer><hr /> <p>2012</p> </footer>
+        </div>
+        <!-- /*footer end*/   -->
 
 
-            <script src="/public/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
-            <script src="/public/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-            <script src="/public/js/bootstrap-dropdown.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/public/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/public/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/public/js/bootstrap-dropdown.js" type="text/javascript" charset="utf-8"></script>
 
     </body>
 </html>
