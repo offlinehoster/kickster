@@ -15,7 +15,7 @@
             <tr>
 
                 <td>${entity.date}</td>
-                <td>${entity.team1.raw()} </td><td> -  </td><td>${entity.team2.raw()}</td>
+                <td>${entity.team1?.raw()} </td><td> -  </td><td>${entity.team2?.raw()}</td>
                 <td>${entity.scoreTeam1} : ${entity.scoreTeam2}</td>
                 <td>
                     <a class="icon-zoom-in" href="@{Matches.show(entity.id)}"></a>&nbsp;
