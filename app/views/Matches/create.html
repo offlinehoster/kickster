@@ -1,14 +1,12 @@
 #{extends 'main.html' /}
 <div class="entity">
     <fieldset>
-        <legend><h2>Create a new Match</h2></legend>
         #{form @Matches.save(), id:'createForm', class:'form-horizontal'}
 	#{include 'Matches/_form.html' /}
-        <div class="form-actions">
-            <input  class="btn btn-primary" type="submit" name="submit" value="Save" />
-            <a  class="btn" href="@{Matches.index}">Cancel</a>
+        <div class="opacity form-actions">
+            <input  class="btn btn-large btn-primary" type="submit" name="submit" value="Save" />
+            <a  class="btn btn-large" href="@{Matches.index}">Cancel</a>
         </div>
-
         #{/form}
     </fieldset>
 </div>
