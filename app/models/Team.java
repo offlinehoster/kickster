@@ -29,7 +29,7 @@ public class Team extends Model {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("Team ");
         int i = 0;
         for (Player p : players) {
             sb.append(p.name);

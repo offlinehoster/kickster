@@ -34,23 +34,27 @@ public class Match extends Model {
 
     public Set<Player> getPlayers() {
         Set<Player> players = new HashSet<Player>();
-        for (Player p : team1.players) {
-            players.add(p);
+        if (team1 != null) {
+            for (Player p : team1.players) {
+                players.add(p);
+            }
         }
-        for (Player p : team2.players) {
-            players.add(p);
+        if (team1 != null) {
+            for (Player p : team2.players) {
+                players.add(p);
+            }
         }
         return players;
     }
 
-    public boolean isOpen(){
+    public boolean isOpen() {
         return getPlayers().size() < 4;
     }
-    
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(Player p : getPlayers()){
+        for (Player p : getPlayers()) {
             sb.append(p).append(" ");
         }
         return sb.toString();
