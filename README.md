@@ -1,7 +1,8 @@
+
+![Kickster Logo](https://github.com/phaus/kickster/raw/master/public/img/logo-small.png "Kickster Logo")
+
 kickster
 ========
-
-![Kickster Logo](https://github.com/phaus/kickster/blob/master/public/img/logo-small.png "Kickster Logo")
 
 a kicker game statistic tool
 
