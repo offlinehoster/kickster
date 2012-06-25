@@ -1,11 +1,11 @@
 kickster
 ========
 
-![Kickster Logo](public/img/logo-small.png "Kickster Logo")
+![Kickster Logo](https://github.com/phaus/kickster/blob/master/public/img/logo-small.png "Kickster Logo")
 
 a kicker game statistic tool
 
-# Setup
+## Setup
 
 * Download Play 1.x from http://download.playframework.org/releases/play-1.2.4.zip 
 * Extract to a reasonable directory (say _/opt/play_).
