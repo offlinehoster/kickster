@@ -12,11 +12,11 @@ a kicker game statistic tool
 * Extract to a reasonable directory (say _/opt/play_).
 * Make play command accessible within your path - e.g. adding to .profile or just
 
-    export PATH=$PATH:/opt/play/play
+        export PATH=$PATH:/opt/play/play
 
 * run the app with 
 
-    play run
+        play run
 
 or
 
