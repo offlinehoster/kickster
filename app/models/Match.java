@@ -3,6 +3,7 @@ package models;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -28,6 +29,7 @@ public class Match extends Model {
     public int scoreTeam1;
     public int scoreTeam2;
     @Temporal(TemporalType.DATE)
+    @Column(name="dateOfMatch")
     public Date date;
 
     public Match() {

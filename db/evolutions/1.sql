@@ -5,7 +5,7 @@
 
 CREATE TABLE Player (
   id bigint(20) NOT NULL AUTO_INCREMENT,
-  name varchar(255) DEFAULT NULL,
+  playerName varchar(255) DEFAULT NULL,
   score int(11) NOT NULL,
   PRIMARY KEY (id)
 );
@@ -25,7 +25,7 @@ CREATE TABLE Team_Player (
 
 CREATE TABLE Matches (
   id bigint(20) NOT NULL AUTO_INCREMENT,
-  date date DEFAULT NULL,
+  dateOfMatch date DEFAULT NULL,
   scoreTeam1 int(11) NOT NULL,
   scoreTeam2 int(11) NOT NULL,
   team1_id bigint(20) DEFAULT NULL,

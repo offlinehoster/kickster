@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Set;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import play.db.jpa.Model;
@@ -12,6 +13,7 @@ import play.db.jpa.Model;
 @Entity
 public class Player extends Model {
 
+    @Column(name="playerName")
     public String name;
     @ManyToMany(mappedBy="players")
     public Set<Team> teams;
