@@ -5,7 +5,7 @@
 !.gitignore
 
 # Ignore Play! working directory #
-db
+db/h2
 eclipse
 log
 logs

@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import play.data.validation.Required;
@@ -15,6 +16,7 @@ import play.db.jpa.Model;
  * @author screencast
  */
 @Entity
+@Table(name="Matches")
 public class Match extends Model {
 
     @ManyToOne
