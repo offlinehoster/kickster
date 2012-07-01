@@ -2,7 +2,7 @@
 
 # --- !Ups
 
-CREATE TABLE IF NOT EXISTS `Matches` (
+CREATE TABLE `Matches` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `date` date DEFAULT NULL,
   `scoreTeam1` int(11) NOT NULL,
@@ -12,19 +12,19 @@ CREATE TABLE IF NOT EXISTS `Matches` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Player` (
+CREATE TABLE `Player` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Team` (
+CREATE TABLE `Team` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Team_Player` (
+CREATE TABLE `Team_Player` (
   `teams_id` bigint(20) NOT NULL,
   `players_id` bigint(20) NOT NULL,
   PRIMARY KEY (`teams_id`,`players_id`)
