@@ -15,3 +15,5 @@ test-result
 eclipse
 server.pid
 nbproject
+
+tmp/bytecode/DEV/_app_views_Application_index.html
