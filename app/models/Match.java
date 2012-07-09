@@ -3,8 +3,10 @@ package models;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import play.data.validation.Required;
@@ -15,6 +17,7 @@ import play.db.jpa.Model;
  * @author screencast
  */
 @Entity
+@Table(name="Matches")
 public class Match extends Model {
 
     @ManyToOne
@@ -23,9 +26,10 @@ public class Match extends Model {
     @ManyToOne
     @Required
     public Team team2;
-    public int scoreTeam1;
-    public int scoreTeam2;
+    public long scoreTeam1;
+    public long scoreTeam2;
     @Temporal(TemporalType.DATE)
+    @Column(name="dateOfMatch")
     public Date date;
 
     public Match() {
