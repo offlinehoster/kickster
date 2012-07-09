@@ -26,8 +26,8 @@ public class Match extends Model {
     @ManyToOne
     @Required
     public Team team2;
-    public Long scoreTeam1;
-    public Long scoreTeam2;
+    public long scoreTeam1;
+    public long scoreTeam2;
     @Temporal(TemporalType.DATE)
     @Column(name="dateOfMatch")
     public Date date;

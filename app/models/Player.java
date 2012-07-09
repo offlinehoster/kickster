@@ -17,7 +17,7 @@ public class Player extends Model {
     public String name;
     @ManyToMany(mappedBy="players")
     public Set<Team> teams;
-    public Long score;
+    public long score;
 
     @Override
     public String toString() {
